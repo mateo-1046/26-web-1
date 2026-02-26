@@ -7,7 +7,13 @@ export default async function EspecieDetallePage({
   // Aquí el parámetro 'slug' es parte de la URL, no del ?query
 
   //1. Consumir la api GET https://rickandmortyapi.com/api/character/?species=${slug}
+  const apiUrl = `https://rickandmortyapi.com/api/character/?species=${slug}`
+  const res = await fetch(apiUrl)
+  const chara = await res.json()
+  console.log(chara)
+
   //2. Asignar la respuesta 
+
   //3. Mostrar la UI   
   
   

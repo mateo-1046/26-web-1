@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
+
 export default function BatteryIndicator() {
   // 1. Estado local del hardware
   const [battery, setBattery] = useState({
@@ -41,7 +42,7 @@ export default function BatteryIndicator() {
   }, []);
 
   // 3. Lógica de UI basada en condiciones
-  const isLowPower = battery.level <= 0.2;
+  const isLowPower = battery.level <= 0.3;
   const percentage = Math.round(battery.level * 100);
 
   return (

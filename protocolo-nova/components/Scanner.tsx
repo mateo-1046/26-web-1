@@ -7,9 +7,30 @@ export default function Scanner() {
   useEffect(() => {
     // 🔴 TAREA ESTUDIANTE:
     // 1. Crear función asíncrona para pedir acceso a cámara
+    camara()
     // 2. Usar navigator.mediaDevices.getUserMedia({ video: true })
+    
     // 3. Asignar el stream a videoRef.current.srcObject
   }, []);
+
+  const camara = async () => {
+    
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: true,
+        });
+
+        if (videoRef.current) {
+            videoRef.current.srcObject = stream;
+        }
+
+        
+    } catch (error) {
+    
+    }
+
+  }
+
 
   return (
     <div className="relative overflow-hidden rounded-xl border-2 border-emerald-500/20 bg-black aspect-video">
