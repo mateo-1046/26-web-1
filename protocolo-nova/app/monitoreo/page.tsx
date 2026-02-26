@@ -11,7 +11,7 @@ export default function Monitoreo(){
     return(
         <div>
             <div>
-                Header
+                Headergg
             </div>
             <div className="grid grid-cols-2 md:grid-cols-1 h-screen mt-10 gap-6 m-10">
                 <div className="">
